@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.estilo_campos {
+	font-family: Arial;
+	font-size: 18px;
+	color: #FFFFFF;
+	background-color: olive;
+	border: none;
+	width: 300px; 	
+}
+
+.button {
+	font-family: Arial;
+	font-size: 18px;
+	color: #FFFFFF;
+	background-color: blue;
+}
