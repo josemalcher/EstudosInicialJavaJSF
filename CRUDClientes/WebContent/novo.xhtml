@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+	<h:form>
+		<h:outputLabel value="Nome:"></h:outputLabel>
+		<h:inputText id="nome" value="#{cliBean.nome}"></h:inputText>
+		<br></br>
+		<h:outputLabel value="Email:"></h:outputLabel>
+		<h:inputText id="email" value="#{cliBean.email}"></h:inputText>
+		<br></br>
+		<h:outputLabel value="Idade:"></h:outputLabel>
+		<h:inputText id="idade" value="#{cliBean.idade}"></h:inputText>
+		<br></br>
+		<h:commandButton type="submit" value="Cadastrar" action="#{cliBean.addUser}"></h:commandButton>
+		<h:commandButton type="reset" value="Limpar"></h:commandButton>
+		
+	</h:form>
+</h:body>
+</html>
