@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+<link rel="stylesheet" type="text/css" href="site.css" />
+
+</h:head>
+<h:body>
+
+<h:dataTable value="#{cliBean.clientes}" var="dados" headerClass="header" styleClass="listagem" rowClasses="coluna1, coluna2">
+	<h:column>
+		<f:facet name="header">
+			<h:outputText value="ID"></h:outputText>
+		</f:facet>
+		<h:outputText value="#{dados.id}"></h:outputText>
+	</h:column>
+		<h:column>
+		<f:facet name="header">
+			<h:outputText value="Nome"></h:outputText>
+		</f:facet>
+		<h:outputText value="#{dados.nome}"></h:outputText>
+	</h:column>
+		<h:column>
+		<f:facet name="header">
+			<h:outputText value="Email"></h:outputText>
+		</f:facet>
+		<h:outputText value="#{dados.email}"></h:outputText>
+	</h:column>
+		<h:column>
+		<f:facet name="header">
+			<h:outputText value="Idade"></h:outputText>
+		</f:facet>
+		<h:outputText value="#{dados.idade}"></h:outputText>
+	</h:column>
+</h:dataTable>
+<h:link value="Novo Cliente" outcome="novo"></h:link>
+
+</h:body>
+
+</html>

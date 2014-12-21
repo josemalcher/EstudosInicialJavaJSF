@@ -94,7 +94,7 @@ public class ClienteDAO {
 		return vo;
 	}
 
-	public List<ClienteVO> getALL(int ID) throws ClassNotFoundException,
+	public List<ClienteVO> getALL() throws ClassNotFoundException,
 			SQLException {
 
 		String SQL = "SELECT * FROM clientes";
@@ -113,6 +113,7 @@ public class ClienteDAO {
 			vo.setNome(rs.getString("nome"));
 			vo.setEmail(rs.getString("email"));
 			vo.setIdade(rs.getInt("idade"));
+			lista.add(vo);
 		}
 		return lista;
 	}
