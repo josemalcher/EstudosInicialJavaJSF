@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+<link rel="stylesheet" type="text/css" href="site.css" />
+
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:outputLabel value="EDITAR Cadastro de Clientes"></h:outputLabel>
+		<br></br>
+		<h:outputLabel value="Nome:"></h:outputLabel>
+		<h:inputText id="nome" value="#{cliBean.clienteVO.nome}" styleClass="estilo_campos" ></h:inputText>
+		<br></br>
+		<h:outputLabel value="Email:"></h:outputLabel>
+		<h:inputText id="email" value="#{cliBean.clienteVO.email}" styleClass="estilo_campos"></h:inputText>
+		<br></br>
+		<h:outputLabel value="Idade:"></h:outputLabel>
+		<h:inputText id="idade" value="#{cliBean.clienteVO.idade}" styleClass="estilo_campos"></h:inputText>
+		<br></br>
+		<h:commandButton type="submit" value="Atualizar" action="#{cliBean.update}" styleClass="button"></h:commandButton>
+		<h:commandButton type="reset" value="Limpar" styleClass="button"></h:commandButton>
+
+	</h:form>
+</h:body>
+</html>
