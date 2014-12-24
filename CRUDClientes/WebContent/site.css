@@ -6,7 +6,7 @@
 	color: #FFFFFF;
 	background-color: olive;
 	border: none;
-	width: 300px; 	
+	width: 300px;
 }
 
 .button {
@@ -16,7 +16,7 @@
 	background-color: blue;
 }
 
-.header{
+.header {
 	font-family: Arial;
 	font-size: 14px;
 	color: yellow;
@@ -24,25 +24,33 @@
 	padding: 5px;
 }
 
-.listagem{
+.listagem {
 	border-color: black;
 	border-width: 2px;
 	border-bottom-style: solid;
 	background-color: white;
 }
-.coluna1{
+
+.coluna1 {
 	font-family: Arial;
 	font-size: 12px;
 	color: black;
 	background-color: white;
 	padding: 5px;
-
 }
-.coluna2{
+
+.coluna2 {
 	font-family: Arial;
 	font-size: 12px;
 	color: black;
 	background-color: silver;
 	padding: 5px;
+}
 
+.erros {
+	font-family: Arial;
+	font-size: 14px;
+	color: red;
+	font-weight: bold;
+	
 }

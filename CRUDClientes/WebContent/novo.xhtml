@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +9,7 @@
 
 <h:head>
 
-<link rel="stylesheet" type="text/css" href="site.css" />
+	<link rel="stylesheet" type="text/css" href="site.css" />
 
 </h:head>
 
@@ -16,14 +17,29 @@
 	<h:form>
 		<h:outputLabel value="Cadastro de Clientes"></h:outputLabel>
 		<br></br>
-		<h:outputLabel value="Nome:"></h:outputLabel>
-		<h:inputText id="nome" value="#{cliBean.clienteVO.nome}" styleClass="estilo_campos" ></h:inputText>
+		<h:outputLabel value="#{labels.lbname}"></h:outputLabel>
+		<h:inputText id="nome" required="true"
+			requiredMessage="Preencha esse campo"
+			validatorMessage="Preencha no minimo 6 caracters"
+			value="#{cliBean.clienteVO.nome}" styleClass="estilo_campos">
+			<f:validateLength for="" minimum="6"></f:validateLength>
+		</h:inputText>
+		&nbsp;
+		<h:message for="nome" styleClass="erros"></h:message>
 		<br></br>
 		<h:outputLabel value="Email:"></h:outputLabel>
-		<h:inputText id="email" value="#{cliBean.clienteVO.email}" styleClass="estilo_campos"></h:inputText>
+		<h:inputText id="email" required="true"
+			requiredMessage="Preencha esse campo" 
+			validatorMessage="Coloque um email valido"
+			value="#{cliBean.clienteVO.email}" styleClass="estilo_campos">
+			<f:validateRegex pattern="^([0-9a-zA-Z-_.-]+([_.-]?[0-9a-zA-Z]+)*@[0-9a-zA-Z]+[0-9,a-z,A-Z,.,-]*(.){1}[a-zA-Z]{2,4})+$"></f:validateRegex>
+		</h:inputText>
+		&nbsp;
+		<h:message for="email" styleClass="erros"></h:message>
 		<br></br>
 		<h:outputLabel value="Idade:"></h:outputLabel>
-		<h:inputText id="idade" value="#{cliBean.clienteVO.idade}" styleClass="estilo_campos"></h:inputText>
+		<h:inputText id="idade" value="#{cliBean.clienteVO.idade}"
+			styleClass="estilo_campos"></h:inputText>
 		<br></br>
 		<h:commandButton type="submit" value="Cadastrar"
 			action="#{cliBean.addUser}" styleClass="button"></h:commandButton>
